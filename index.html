@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>UWP</title>
+    <link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/lozad@1.14.0/dist/lozad.min.js"></script>
+</head>
+<body class="">
+     <div class="wrapper flex flex-col bg-light dark:bg-dark">
+        <header class="header relative">
+            <div class="max-w-screen-2xl mx-auto px-15">
+               <nav class="flex flex-wrap justify-between py-22.5 items-center">
+                  <div class="flex md: max-w-[150px] justify-between">
+                    <a class="mr-[15px]" href="#">
+                        <img src="img/logo.svg" class="mr-50 dark:hidden lazy" alt="">
+                        <img src="img/logo-dark.svg" class="mr-50 hidden dark:block lazy" alt="">
+                    </a>
+                      
+
+                        <img src="img/sun.svg" class="toggle-theme w-[30px] h-[30px] dark:hidden lazy" alt="Toggle Dark Mode">
+                        <img src="img/moon.svg" class="toggle-theme dark:block w-[30px] h-[30px] hidden lazy" alt="Toggle Light Mode">
+
+                      
+
+                  </div>
+                  <ul id="navigation" class="flex flex-wrap justify-between">
+                     <li><div class="text-h5 uppercase ml-50"><a class="text-dark font-medium dark:text-white" href="">cases</a></div></li>
+                     <li><div class="text-h5 uppercase ml-50"><a class="flex text-dark font-medium dark:text-white" href="">service<img class="ml-10" src="img/dropdown.svg" alt=""></a></div></li>
+                     <li><div class="text-h5 uppercase ml-50"><a class="text-dark font-medium dark:text-white" href="">about us</a></div></li>
+                     <li><div class="text-h5 uppercase ml-50"><a class="text-dark font-medium dark:text-white" href="">blog</a></div></li>
+                     <li><div class="text-h5 uppercase ml-50"><a class="text-dark font-medium dark:text-white" href="">contact</a></div></li>
+                  </ul>
+                  <div class="flex items-center">
+                     <button class="bg-main px-22.5 py-10  md:px-0 mr-10 rounded-[60px] uppercase">
+                        <div class="flex justify-between ">
+                           <h5 class="text-h5 uppercase  text-white font-medium"><div class="letstalk px-22.5">lets talk</div></h5> 
+                           <img class="ml-10" src="img/Vector.svg" alt="">
+                        </div>
+                     </button>
+                     <div class="language__selector flex"><img class="w-[20px] mr-10 font-medium lazy " src="img/GB.svg" alt=""><p class="eng md:flex dark:text-white">ENG</p></div>
+                     <style>
+                        
+                        @media (max-width:476px) {
+                            .language__selector,.letstalk{
+                                display: none;
+                            }
+                            .right-description{
+                                padding: 0 ; 
+                            }
+                        }
+                     </style>
+
+                     <div class="ml-10 burger-icon">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </header>
+         <style>
+            @media (max-width:1100px) {
+                    .burger-icon {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        cursor: pointer;
+                    }
+                    #navigation {
+                            display: none;
+                            position: fixed;
+                            top: 80px; /* adjust this value as needed */
+                            left: 0;
+                            width: 100%;
+                            padding: 20px;
+                            background-color: transparent;
+                        }
+                    #navigation.show {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        }
+                    .burger-icon .line1,
+                    .burger-icon .line2,
+                    .burger-icon .line3 {
+                        width: 100%;
+                        height: 4px;
+                        background-color: black;
+                        margin: 6px 0;
+                        border-radius: 2px;
+                        transition: all 0.2s ease;
+                    }
+                    .dark .burger-icon .line1,
+                    .dark .burger-icon .line2,
+                    .dark .burger-icon .line3 {
+                    background-color: #fff;
+                    }
+                    
+                }
+
+         </style>
+
+         <main class="main">
+            <section class="breadcrumbs">
+                <div class="max-w-screen-2xl mx-auto px-15">
+                    <div class="breadcrumbs justify-start">
+                        <ul class="flex">
+                            <li><div class="text-h5"><a class="flex text-middle-grey font-normal" href="">Main<img class="mx-8 lazy" src="img/grey-vector.svg" alt=""></a></div></li>
+                            <li><div class="text-h5  "><a class="flex text-middle-grey font-normal" href="">Service<img class="mx-8 lazy" src="img/grey-vector.svg" alt=""></a></div></li>
+                            <li><div class="text-h5  "><a class="text-middle-grey font-normal uppercase" href="">branding</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="underheader__banner branding relative ">
+                <div class="absolute right-[0px]"><img src="img/blur.svg" alt=""></div>
+                <div class="max-w-screen-2xl mx-auto px-15 border-b -grey">
+                    <div class="flex relative flex-wrap justify-between items-center py-75">
+                        <div class="text-h1 uppercase md: mx-auto md:  font-medium flex justify-center flex-col">
+                            <div class="under-header  text-center pb-30">
+                                <h1 class="header_name text-h1  md:text-32 dark:text-white">branding</h1>
+                            </div>
+                            <button class="text-h5  flex items-center justify-center  bg-main rounded-[60px] max-w-[350px]"><h2 class="px-22.5 flex py-10 text-white">Discuss the project <img  class="ml-10"src="img/arrow45.svg" alt=""></h2></button>
+                        </div>
+                        <div class="flex pt-75 flex-wrap">
+                            <img src="img/topbanner.png" class="lazy" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-screen-2xl mx-auto px-15 ">
+                    <div class="underheader__section lg:flex-wrap lg:justify-center flex justify-between text-dark text-32">
+                        <div class="left-title pr-50 border-r md:pr-[0px] md:border-r-[0px]">
+                            <h2 class="section__title font-bold pt-50 dark:text-white lg:text-[20px]">We create new brands: from strategy to communication</h2>
+                        </div>
+                        <div class="right-description pl-50 py-50 ">
+                            <div class="upper-description md:text-h6 dark:text-white">
+                                A brand gives a product or service an exceptional value for which the customer is willing to pay more. In the world of watches, you choose Rolex or Philippe Patek. The functionality is the same - any of it shows the time. But you are buying value and exclusivity.
+                            </div>
+                            <div class="lower-description pt-50 md:text-h6 dark:text-white">
+                                <div class="font-bold dark:text-white">UWP.Digital</div> helps build a powerful brand with a strong reputation. Branding services include brand book creation, graphic design logo, unique brand name creation, digital graphic design of social networks, web design, tone of voice development, company image, and communication strategy development. We work on projects as a graphic design consultant and full-fledged design agency.
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="work-stages max-w-screen-2xl mx-auto px-15 pt-182">
+                <h2 class="text-h2 uppercase font-bold md: text-h4 md: text-start font-bold text-32 dark:text-white">stages of work</h2>
+                <div class="stages__body flex justify-between border-t -grey">
+                    <div class="body-left minmd:min-w-[320px] lg:hidden items-center pt-50 pr-50 border-r -grey h-64 " id="scroll-container">
+                        <button class="bg-main flex justify-center rounded-[60px] py-10 px-22.5 sticky top-[20px]" id="scroll-button">
+                          <h5 class="text-h5 flex text-white">Discuss the project<img class="ml-10" src="img/arrow45.svg" alt=""></h5>
+                        </button>
+                    </div>
+                    <div class="body-right minmd:pl-[150px] w-full flex-wrap flex-col flex justify-end ">
+                        <div class="analysis  ">
+                            <div class="wrapped__items ml-0 md: flex justify-between py-50 border-b -grey flex-wrap ">
+                                <div class="title flex flex-col ">
+                                    <p class="text-middle-grey text-[24px]">01/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description md : max-w-[190px] dark:text-white">Analysis and strategy</h2>
+                                </div>
+                                <div class="description flex items-center justify-between  max-w-[670px] text-32">
+                                    <h5 class="dark:text-white">Firstly, we study the product itself, the market, the niche, and the competitors. We define the target audience, segment it, and determine the social platforms where we will interact with it. We define positioning, USP, highlight the mission and philosophy of the brand. We develop the brand concept, slogan, and unique name.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis  ">
+                            <div class="wrapped__items ml-0 md: flex justify-between py-50 border-b -grey flex-wrap ">
+                                <div class="title flex flex-col ">
+                                    <p class="text-middle-grey text-[24px]">02/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description md : max-w-[190px] dark:text-white">Graphic design</h2>
+                                </div>
+                                <div class="description flex items-center justify-between  max-w-[670px] text-32">
+                                    <h5 class="dark:text-white">We develop a corporate style concept: corporate colors, a brand book, select a font and help to make your own logo. We package your brand with graphic design and illustration.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis  ">
+                            <div class="wrapped__items ml-0 md: flex justify-between py-50 border-b -grey flex-wrap ">
+                                <div class="title flex flex-col ">
+                                    <p class="text-middle-grey text-[24px]">03/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description md : max-w-[190px] dark:text-white">Communication strategy</h2>
+                                </div>
+                                <div class="description flex items-center justify-between max-w-[670px] text-32">
+                                    <h5 class="dark:text-white">We create the tone of voice of the brand, develop the Big Idea, reveal the brand story, and work out the key messages and channels for its transmission. We develop slogans and offers for advertising creatives.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis  ">
+                            <div class="wrapped__items ml-0 md: flex justify-between py-50 border-b -grey flex-wrap ">
+                                <div class="title flex flex-col ">
+                                    <p class="text-middle-grey text-[24px]">04/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description md : max-w-[190px] dark:text-white">Web design</h2>
+                                </div>
+                                <div class="description flex items-center justify-between  max-w-[670px] text-32">
+                                    <h5 class="dark:text-white">We develop design and content for landing pages or websites. We use corporate colors and a single corporate identity.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            @media (max-width:1100px) {
+                                .description h5{
+                                    font-size: 16px;
+                                }
+                                .title h2{
+                                    font-size: 20px;
+                                }
+                            }
+                            @media (min-width:769px) {
+                                .right-description{
+                                    padding-left: 30%;
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+            </section>
+            <section class="minds">
+                <div class="max-w-screen-2xl mx-auto px-15 pt-182">
+                    <h2 class="text-h2  justify-center flex text-start md:text-h6 font-bold dark:text-white" >Branding is an investment in the future of your business</h2>
+                    <div class="minds-body flex flex-col pl-50% pt-50 md:pl-[0px]">
+                        <div class="title flex flex-col "><h4 class="text-32 md:text-h6 dark:text-white">The process of branding is preparatory work and testing hypotheses. As a result of all the stages passed, you get the image that will ultimately connect your company and the customer.</h4></div>
+                        <div class="sub-title flex flex-col"><h4 class="text-32 md:text-h6 dark:text-white">If you are looking for a graphic designer or graphic design agency that can create a company logo for you, welcome to UWP.Digital. We offer a full range of branding services to enhance your business and stand out from the competitors. Quality branding gives you an advantage in the market.</h4></div>
+                    </div>
+                </div>
+            </section>
+            <section class="problems">
+                <div class="problems__title text-h2 max-w-screen-2xl mx-auto px-15 text-start py-50 font-bold md:text-h6 dark:text-white">
+                    What problems can we solve?
+                </div>
+                <div class="problems__colums justify-between  flex flex-wrap max-w-screen-2xl mx-auto px-15 lg:justify-center">
+                    <div class="body-left minmd:min-w-[320px] lg:hidden items-center pt-50 pr-50 border-r -grey h-64 " id="scroll-container">
+                        <button class="bg-main flex justify-center rounded-[60px] py-10 px-22.5 sticky top-[20px]" id="scroll-button">
+                          <h5 class="text-h5 flex text-white">Discuss the project<img class="ml-10" src="img/arrow45.svg" alt=""></h5>
+                        </button>
+                    </div>
+                    <div class="middle-column flex flex-col text-32 border-r -grey  pt-50 pr-[64px] w-[480px] lg:justify-center lg:w-auto ">
+                        <div class="column-item pt-50 lg: py-[30px]">
+                            <div class="column-title text-middle-grey text-[24px]">0/1</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">Branding, and naming turnkey</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                        <div class="column-item pt-[105px] lg: py-[30px]">
+                            <div class="column-title text-middle-grey text-[24px]">0/3</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">We strengthen the product, and bring new services to the market</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                        <div class="column-item pt-[105px] lg: py-[30px]">
+                            <div class="column-title text-middle-grey text-[24px]">0/5</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">We build a system for working with the audience, develop a communication strategy</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                    </div>
+                    <div class="sub-column pt-[125px] text-32 pt-[75px] pl-[65px] w-[480px]  -grey lg:p-[0px] lg:border-r lg:w-auto -grey">
+                        <div class="sub-column-item lg: py-[30px]">
+                            <div class="column-title text-middle-grey text-[24px]">0/2</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">We help to adapt foreign brands to the Swedish market</div>
+                            <div class="item-line pt-50 border-b -grey"></div>
+                        </div>
+                        <div class="sub-column-item pt-[75px]lg: py-[30px]">
+                            <div class="column-title text-middle-grey text-[24px]">0/4</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">We create a unified style of the company, and develop the philosophy and brand story</div>
+                            <div class="item-line pt-50 border-b -grey"></div>
+                        </div>
+                        <div class="sub-column-item pt-[75px] lg: py-[30px]">
+                            <div class="column-title text-middle-grey text-[24px]">0/6</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">We build a system for working with the audience, develop a communication strategy</div>
+                            <div class="item-line pt-50 border-b -grey"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="numbers max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="numbers__title text-h2 text-start py-50 font-bold md:text-h6 dark:text-white">OUR ADVANTAGES IN NUMBERS</div>
+                <div class="undertitle__line border-b -grey pt-50"></div>
+                <div class="number__body">
+                    <div class="body__row flex  flex-wrap justify-evenly pl-[10%] md:justify-start md:items-center">
+                        <div class="row__item">
+                            <div class="item-title text-light-red text-h4 font-bold">4+</div>
+                            <div class="item-sub-title dark:text-white">+ years of experience in department staff</div>
+                        </div>
+                        <div class="row__item">
+                            <div class="item-title text-light-red text-h4 font-bold">100+</div>
+                            <div class="item-sub-title dark:text-white">written stories for brands</div>
+                        </div>
+                        <div class="row__item">
+                            <div class="item-title text-light-red text-h4 font-bold">300+</div>
+                            <div class="item-sub-title dark:text-white">developed brand books</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advent-web max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="advent-web__title font-bold text-h2 text-start md:text-h6 dark:text-white">ADVANTAGES OF A WEBSITE DEVELOPMENT</div>
+                <div class="border border-b -grey"></div>
+                <div class="advent__container pl-[25%] flex flex-col lg:pl-[0px]">
+                    <div class="left-section w-[25%] lg:hidden"></div>
+                    <div class="section__upper flex justify-between max-w-[1000px]  pt-50 pb-30 pl-[175px] border-l -grey lg:pl-[0px] lg:flex-wrap lg:justify-center lg:border-[0px] ">
+                        <div class="upper__item flex flex-col text-center">
+                            <div class="item__title text-light-red text-h4 font-bold">3 times</div>
+                            <div class="item__subtitle dark:text-white">we get traffic faster</div>
+                        </div>
+                        <div class="upper__item flex flex-col text-center">
+                            <div class="item__title text-light-red text-h4 font-bold">For 50%</div>
+                            <div class="item__subtitle dark:text-white">we are saving the budget for updating the site</div>
+                        </div>
+                    </div>
+                    <div class="section__lower border-l -grey pl-[175px]  flex flex-col lg:pl-[0px] lg:border-[0px] ">
+                        <div class="hr-line border-t -grey lg:hidden"></div>
+                        <ul class="list pt-50">
+                            <li class="flex items-center dark:text-white"><div class="red-circle flex justify-center w-[32px] h-[32px] rounded-[50%] mr-10 bg-main md:hidden"><img class="w-[20px]" src="img/accept-arrow.svg" alt=""></div>Reduces the amount of improvements after the release</li>
+                            <li class="flex py-10 items-center dark:text-white"><div class="red-circle flex justify-center w-[32px] h-[32px] rounded-[50%] mr-10 bg-main md:hidden"><img class="w-[20px]" src="img/accept-arrow.svg" alt=""></div>It does not contain technical errors affecting the quality assessment of the site</li>
+                            <li class="flex items-center dark:text-white"><div class="red-circle flex justify-center w-[32px] h-[32px] rounded-[50%] mr-10 bg-main md:hidden"><img class="w-[20px]" src="img/accept-arrow.svg" alt=""></div>Effectively covers the target search demand in the subject</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="trust max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="trust__title font-bold text-h2 text-start md:text-h6 dark:text-white">WHY YOU CAN TRUST US</div>
+                <div class="trust__body flex justify-between flex-wrap border-t pt-[45px]">
+                    <div class="left-button flex flex-col h-auto border-r md:border-r-[0px] ">
+                        <button class="border px-22.5 py-10  md:px-0 mr-10 rounded-[60px] uppercase md:hidden">
+                            <div class="flex justify-between ">
+                               <h5 class="text-h5 uppercase  text-dark font-medium"><div class="letstalk px-22.5 dark:text-white">Our business presentation</div></h5> 
+                            </div>
+                         </button>
+                    </div>
+                    <div class="middle-info flex-auto flex items-center flex-col border-r md:border-r-[0px] justify-center">
+                        <div class="column-item w-[400px] pt-50 lg: py-[30px] md:w-full">
+                            <div class="column-title text-light-red text-h4 font-bold">4+</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">years experience in web development</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                        <div class="column-item w-[400px] pt-50 lg: py-[30px] md:w-full">
+                            <div class="column-title text-light-red text-h4 font-bold">2 500</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">landing pages created</div>
+                            <div class="item-line pt-50 border-b -grey w-auto"></div>
+                        </div>
+                        <div class="column-item w-[400px] pt-50 lg: py-[30px] md:w-full">
+                            <div class="column-title text-light-red text-h4 font-bold">200+</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">developed sites</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                    </div>
+                    <div class="right-info  flex-auto flex items-center flex-col border-r -grey justify-center">
+                        <div class="column-item w-[400px] pt-50 lg: py-[30px] md:w-full">
+                            <div class="column-title text-light-red text-h4 font-bold">10-15</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">specialists in the project team for each site</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                        <div class="column-item w-[400px] pt-50 lg: py-[30px] md:w-full">
+                            <div class="column-title text-light-red text-h4 font-bold">400+</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">satisfied customers</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                        <div class="column-item w-[400px] pt-50 lg: py-[30px md:w-full">
+                            <div class="column-title text-light-red text-h4 font-bold">50+</div>
+                            <div class="column-sub-title text-32  text-dark font-bold upper-description md:text-h6 dark:text-white">+ employees in the company</div>
+                            <div class="item-line pt-50 border-b -grey "></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="developing max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="developing__title font-bold text-h2 text-start md:text-h6 dark:text-white">STAGES OF DEVELOPING A WEBSITE ON A TURNKEY</div>
+                <div class="border border-b -grey"></div>
+                <div class="dev-content flex flex-wrap pt-50 lg: justify-center  lg:hidden">
+                    <div class="left-section">
+                        <div class="buttons flex flex-col w-[375px] px-22.5 border-r ">
+                            <button class="analysisbtn btn mb-[40px] text-middle-grey flex justify-between font-bold focus:text-dark dark:text-white">ANALYSIS AND STRATEGY<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                            <button class="designbtn btn mb-[40px] text-middle-grey flex justify-between font-bold focus:text-dark dark:text-white">DESIGN DEVELOPMENT<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                            <button class="programmingbtn btn mb-[40px] text-middle-grey flex justify-between font-bold focus:text-dark dark:text-white">PROGRAMMING<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                            <button class="connectionbtn btn mb-[40px] text-middle-grey flex justify-between font-bold focus:text-dark dark:text-white">CONNECTION OF SERVICES<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                            <button class="securitybtn btn mb-[40px] text-middle-grey flex justify-between font-bold focus:text-dark dark:text-white">ENSURING SECURITY<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                            <button class="supportbtn btn mb-[40px] text-middle-grey flex justify-between font-bold focus:text-dark dark:text-white">SITE RELEASE AND SUPPORT<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                            
+
+                            <style>
+
+                            </style>
+                        </div>
+                    </div>
+                    <div class="right-section w-[900px] slides-container">
+                        <div id="slide1" class="slide right-section__body slider flex justify-between flex-wrap lg:justify-center">
+                            <div class="info w-[500px] flex flex-col pl-50">
+                                <div class="info__title">
+                                    <div class="stage-counter dark:text-white">1/6</div>
+                                    <div class="block-name text-32 font-bold dark:text-white">ANALYSIS AND STRATEGY</div>
+                                </div>
+                                <div class="info__subtitle text-h6 dark:text-white">We start each project with a deep analysis of the market, niche, competitors, and the target audience’s needs. We develop a strategy for the website and create several solutions based on the data received. Depending on the project's goals, we create a website from scratch, build a website on WordPress or other constructors, improve the site adaptability, and also make a website modernization.</div>
+                            </div>
+                            <img class="max-w-[300px] dark:hidden" src="img/aim.svg" alt="">
+                            <img class="max-w-[300px] hidden dark:block" src="img/aim-dark.svg" alt="">
+                        </div>
+                        <div id="slide2" class="slide right-section__body slider flex justify-between hidden lg:justify-center">
+                            <div class="info w-[500px] flex flex-col pl-50">
+                                <div class="info__title">
+                                    <div class="stage-counter dark:text-white">2/6</div>
+                                    <div class="block-name text-32 font-bold dark:text-white">DESIGN DEVELOPMENT</div>
+                                </div>
+                                <div class="info__subtitle text-h6 dark:text-white">Design website is more than just a pretty illustration. It's also about functionality and ease of use for customers. We take into account the user experience, the wishes of the customer, the specifics of the market, and the needs of the audience. Our team includes a web designer, a web developer, and a UX designer. UWP.Digital offers the creation of a unique design for landings and multi-page sites, as well as the redesign of an existing one. We create high-quality UI UX designs for your website.</div>
+                            </div>
+                            <img class="max-w-[300px] dark:hidden" src="img/cube.svg" alt="">
+                            <img class="max-w-[300px] hidden dark:block" src="img/cube-dark.svg" alt="">
+                        </div>
+                        <div id="slide3" class="slide right-section__body slider flex justify-between hidden lg:justify-center">
+                            <div class="info w-[500px] flex flex-col pl-50">
+                                <div class="info__title">
+                                    <div class="stage-counter dark:text-white">3/6</div>
+                                    <div class="block-name text-32 font-bold dark:text-white">PROGRAMMING</div>
+                                </div>
+                                <div class="info__subtitle text-h6 dark:text-white">Before starting to create a prototype, we approve the layouts and functionality of the future site with the client. We offer you web development with HTML and CSS, web development with PHP and MySQL, web development bth, web development cms. A whole team of web developers and programmers is working on your best result.</div>
+                            </div>
+                            <img class="max-w-[300px] dark:hidden" src="img/planet.svg" alt="">
+                            <img class="max-w-[300px] hidden dark:block" src="img/planet-dark.svg" alt="">
+                        </div>
+                        <div id="slide4" class="slide right-section__body slider flex justify-between hidden lg:justify-center">
+                            <div class="info w-[500px] flex flex-col pl-50">
+                                <div class="info__title">
+                                    <div class="stage-counter dark:text-white">4/6</div>
+                                    <div class="block-name text-32 font-bold dark:text-white">CONNECTION OF SERVICES</div>
+                                </div>
+                                <div class="info__subtitle text-h6 dark:text-white">We recommend you connect a payment system if you sell goods or services through the site. Customers will be able to pay for goods or services directly on your site. You do not need to send payment data personally every time. The system will do everything for you. We also connect additional services to optimize the data collection on customers that come from the registration form on the site.</div>
+                            </div>
+                            <img class="max-w-[300px] dark:hidden" src="img/dots.svg" alt="">
+                            <img class="max-w-[300px] hidden dark:block" src="img/dots-dark.svg" alt="">
+                        </div>
+                        <div id="slide5" class="slide right-section__body slider flex justify-between hidden lg:justify-center">
+                            <div class="info w-[500px] flex flex-col pl-50">
+                                <div class="info__title">
+                                    <div class="stage-counter dark:text-white">5/6</div>
+                                    <div class="block-name text-32 font-bold dark:text-white">SECURITY</div>
+                                </div>
+                                <div class="info__subtitle text-h6 dark:text-white">There is always a risk of bugs or malfunction of any tool in the process of web development and programming. UWP.Digital carefully monitors all possible errors and fixes them. We are responsible for the safety, reliability, and proper operation of the product we develop.</div>
+                            </div>
+                            <img class="max-w-[300px] dark:hidden" src="img/security.svg" alt="">
+                            <img class="max-w-[300px] hidden dark:block" src="img/security-dark.svg" alt="">
+                        </div>
+                        <div id="slide6" class="slide right-section__body slider flex justify-between hidden lg:justify-center">
+                            <div class="info w-[500px] flex flex-col pl-50">
+                                <div class="info__title">
+                                    <div class="stage-counter dark:text-white">6/6</div>
+                                    <div class="block-name text-32 font-bold dark:text-white">SITE RELEASE AND SUPPORT</div>
+                                </div>
+                                <div class="info__subtitle text-h6 dark:text-white">In the final stage, we launch, test, and bring the website to the final result. As a result, you get a finished product with well-established functionality. Advanced web development includes the creation of a site and the subsequent support and maintenance of all its systems.</div>
+                            </div>
+                            <img class="max-w-[300px] dark:hidden" src="img/deploy.svg" alt="">
+                            <img class="max-w-[300px] hidden dark:block" src="img/deploy-dark.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="dev-content-adaptive flex flex-col lgmin:hidden justify-center flex-wrap">
+                    <div class="developing-stages">
+                      <div class="stage-item flex flex-col">
+                        <button class="tabletdropdown flex justify-center items-center focus:outline-none text-middle-grey py-[25px] border-b dark:text-white">ANALYSIS AND STRATEGY <div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                        <div class="item-accordeon flex flex-col justify-center items-center hidden">
+                          
+                          <div class="accordeon-subtitle text-h6 font-bold  flex self-start py-[40px]"><div class="accordeon-title text-middle-grey mr-10 dark:text-white">1/6</div class="dark:text-white">ANALYSIS AND STRATEGY</div>
+                          <div class="accordeon-description dark:text-white">
+                            We start each project with a deep analysis of the market, niche, competitors, and the target audience’s needs. We develop a strategy for the website and create several solutions based on the data received. Depending on the project's goals, we create a website from scratch, build a website on WordPress or other constructors, improve the site adaptability, and also make a website modernization.
+                          </div>
+                          <img class="max-w-[300px]" src="img/aim.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="stage-item flex flex-col">
+                        <button class="tabletdropdown flex justify-center items-center focus:outline-none text-middle-grey py-[25px] border-b dark:text-white">DESIGN DEVELOPMENT<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                        <div class="item-accordeon flex flex-col justify-center items-center hidden">
+                            <div class="accordeon-subtitle text-h6 font-bold  flex self-start py-[40px]"><div class="accordeon-title text-middle-grey mr-10">2/6</div class="dark:text-white">ADESIGN DEVELOPMENT</div>
+                          <div class="accordeon-description dark:text-white">
+                            Design website is more than just a pretty illustration. It's also about functionality and ease of use for customers. We take into account the user experience, the wishes of the customer, the specifics of the market, and the needs of the audience. Our team includes a web designer, a web developer, and a UX designer. UWP.Digital offers the creation of a unique design for landings and multi-page sites, as well as the redesign of an existing one. We create high-quality UI UX designs for your website.
+                          </div>
+                          <img class="max-w-[300px]" src="img/cube.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="stage-item flex flex-col">
+                        <button class="tabletdropdown flex justify-center items-center focus:outline-none text-middle-grey py-[25px] border-b dark:text-white">PROGRAMMING<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                        <div class="item-accordeon flex flex-col justify-center items-center hidden">
+                            <div class="accordeon-subtitle text-h6 font-bold  flex self-start py-[40px]"><div class="accordeon-title text-middle-grey mr-10 dark:text-white">3/6</div class="dark:text-white">PROGRAMMING</div>
+                          <div class="accordeon-description dark:text-white">
+                            Before starting to create a prototype, we approve the layouts and functionality of the future site with the client. We offer you web development with HTML and CSS, web development with PHP and MySQL, web development bth, web development cms. A whole team of web developers and programmers is working on your best result.
+                          </div>
+                          <img class="max-w-[300px]" src="img/planet.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="stage-item flex flex-col">
+                        <button class="tabletdropdown flex justify-center items-center focus:outline-none text-middle-grey py-[25px] border-b dark:text-white">CONNECTION OF SERVICES<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                        <div class="item-accordeon flex flex-col justify-center items-center hidden">
+                            <div class="accordeon-subtitle text-h6 font-bold  flex self-start py-[40px]"><div class="accordeon-title text-middle-grey mr-10 dark:text-white">4/6</div class="dark:text-white">CONNECTION OF SERVICES</div>
+                          <div class="accordeon-description dark:text-white">
+                            We recommend you connect a payment system if you sell goods or services through the site. Customers will be able to pay for goods or services directly on your site. You do not need to send payment data personally every time. The system will do everything for you. We also connect additional services to optimize the data collection on customers that come from the registration form on the site.
+                          </div>
+                          <img class="max-w-[300px]" src="img/dots.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="stage-item flex flex-col">
+                        <button class="tabletdropdown flex justify-center items-center focus:outline-none text-middle-grey py-[25px] border-b dark:text-white">ENSURING SECURITY<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                        <div class="item-accordeon flex flex-col justify-center items-center hidden">
+                            <div class="accordeon-subtitle text-h6 font-bold  flex self-start py-[40px]"><div class="accordeon-title text-middle-grey mr-10 dark:text-white">5/6</div class="dark:text-white">SECURITY</div>
+                          <div class="accordeon-description dark:text-white">
+                            There is always a risk of bugs or malfunction of any tool in the process of web development and programming. UWP.Digital carefully monitors all possible errors and fixes them. We are responsible for the safety, reliability, and proper operation of the product we develop.
+                          </div>
+                          <img class="max-w-[300px]" src="img/security.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="stage-item flex flex-col">
+                        <button class="tabletdropdown flex justify-center items-center focus:outline-none text-middle-grey py-[25px] border-b dark:text-white">SITE RELEASE AND SUPPORT<div class="icon-box flex justify-center items-center w-[20px] h-[20px] rounded-[50%] border ml-10 focus:bg-main"><img class="flex justify-center" src="img/dropdown.svg" alt=""></div></button>
+                        <div class="item-accordeon flex flex-col justify-center items-center hidden">
+                            <div class="accordeon-subtitle text-h6 font-bold  flex self-start py-[40px]"><div class="accordeon-title text-middle-grey mr-10 dark:text-white">6/6</div class="dark:text-white">SITE RELEASE AND SUPPORT</div>
+                          <div class="accordeon-description dark:text-white">
+                            In the final stage, we launch, test, and bring the website to the final result. As a result, you get a finished product with well-established functionality. Advanced web development includes the creation of a site and the subsequent support and maintenance of all its systems.
+                          </div>
+                          <img class="max-w-[300px]" src="img/deploy.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                        // Get all button elements with class 'tabletdropdown'
+                        const buttonsfortablet = document.querySelectorAll('.tabletdropdown');
+
+                        // Loop through each button
+                        buttonsfortablet.forEach(function(button) {
+
+                            // Add a 'click' event listener to the button
+                            button.addEventListener('click', function() {
+                                // Get the next sibling element with class 'item-accordeon'
+                                const itemAccordeon = this.nextElementSibling;
+
+                                // Toggle the 'hidden' class on the 'item-accordeon' element
+                                itemAccordeon.classList.toggle('hidden');
+
+                                // Remove the "active" class and background color from all buttons
+                                buttonsfortablet.forEach(b => {
+                                    b.classList.remove('focus:text-dark');
+                                    b.querySelector('.icon-box').classList.remove('bg-main');
+                                });
+
+                                // Add the "active" class and background color to the clicked button
+                                this.classList.add('focus:text-dark');
+                                this.querySelector('.icon-box').classList.add('bg-main');
+                            });
+                        });
+                    </script>
+                  </div>
+                <script>
+                const analysisBtn = document.querySelector('.analysisbtn');
+                const designBtn = document.querySelector('.designbtn');
+                const progBtn = document.querySelector('.programmingbtn');
+                const connectBtn = document.querySelector('.connectionbtn');
+                const securityBtn = document.querySelector('.securitybtn');
+                const supportBtn = document.querySelector('.supportbtn');
+                const slider = document.querySelector('.right-section__body.slider');
+                const slides = document.querySelectorAll('.right-section__body.slider');
+
+                // Initialize the slide index to 0
+                let slideIndex = 0;
+
+                // Add click event listeners to the buttons
+                analysisBtn.addEventListener('click', () => {
+                // Set the slide index to 0
+                slideIndex = 0;
+
+                // Update the display of the slides
+                updateSlideDisplay();
+                });
+
+                designBtn.addEventListener('click', () => {
+                // Set the slide index to 1
+                slideIndex = 1;
+
+                // Update the display of the slides
+                updateSlideDisplay();
+                });
+
+                progBtn.addEventListener('click', () => {
+                // Set the slide index to 2
+                slideIndex = 2;
+
+                // Update the display of the slides
+                updateSlideDisplay();
+                });
+
+                connectBtn.addEventListener('click', () => {
+                // Set the slide index to 3
+                slideIndex = 3;
+
+                // Update the display of the slides
+                updateSlideDisplay();
+                });
+
+                securityBtn.addEventListener('click', () => {
+                // Set the slide index to 4
+                slideIndex = 4;
+
+                // Update the display of the slides
+                updateSlideDisplay();
+                });
+
+                supportBtn.addEventListener('click', () => {
+                // Set the slide index to 5
+                slideIndex = 5;
+
+                // Update the display of the slides
+                updateSlideDisplay();
+                });
+
+                function updateSlideDisplay() {
+                // Hide all slides
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                }
+
+                // Show the current slide
+                slides[slideIndex].style.display = 'flex';
+
+                // Update the stage counter and block name
+                const stageCounter = document.querySelector('.stage-counter');
+                stageCounter.textContent = `${slideIndex + 1}/${slides.length}`;
+
+                document.querySelector('.block-name').textContent = slides[slideIndex].querySelector('.info__title .block-name').textContent;
+                }
+
+
+
+                </script>
+            </section>
+            <section class="usingtools max-w-screen-2xl border-b mx-auto px-15 pt-182">
+                <div class="usingtools font-bold text-h2 text-start md:text-h6 dark:text-white">WE SELECT THE SUITABLE INSTRUMENTS FOR YOUR PROMOTION</div>
+                <div class="usingtools__body flex  border-t">
+                    <div class="body__left w-[360px] border-r pt-50 h-auto lg:hidden">
+                        <h4 class="text-h4 font-bold dark:text-white">By type of service</h4>
+                    </div>
+                    <div class="body__info pl-[150px] flex flex-col flex-wrap justify-between xl:pl-[0px]">
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">01/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">SEO-optimization of sites</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px]">
+                                    <h5 class="md:w-auto dark:text-white">We develop design and content for landing pages or websites. We use corporate colors and a single corporate identity.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">02/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">Search audit and growth points</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px] dark:text-white">
+                                    <h5 class="md:w-auto">We will show you how to improve your site in the eyes of customers and search engines. We will indicate growth points for promoting a business and a product.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">03/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">Information promotion</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px] dark:text-white">
+                                    <h5 class="md:w-auto">We write articles to optimize the corporate blog to attract more buyers to your website.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50  flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">04/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">Online store promotion</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px] dark:text-white">
+                                    <h5 class="md:w-auto">We will increase the number of your customers with the help of search engine optimization google. We work with each stage of the funnel: from the formation of a need to sales growth.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="usingtoolsbyindustry__body flex  border-t">
+                    <div class="body__left w-[360px] border-r pt-50 h-auto lg:hidden">
+                        <h4 class="text-h4 font-bold dark:text-white">BY INDUSTRY</h4>
+                    </div>
+                    <div class="body__info pl-[150px] flex flex-col flex-wrap justify-between xl:pl-[0px]">
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">01/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">E-commerce</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px]">
+                                    <h5 class="md:w-auto dark:text-white">We work with online stores, catalogs, and product cards. We will help to make the client pay for the order and return it to you again.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">02/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">Medicine</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px]">
+                                    <h5 class="md:w-auto dark:text-white">We increase the expertise of the site so that it ranks higher in search engines.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">03/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">Finance and insurance</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px] dark:text-white">
+                                    <h5 class="md:w-auto">Bank websites have many nuances for promotion. We will help improve the quality of the product and work out the scale of the site and business to take the top positions.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item flex">
+                            <div class="md: flex  py-50 border-b -grey flex-wrap lg:justify-start">
+                                <div class="title  flex flex-col sm:  text-start">
+                                    <p class="text-middle-grey text-[24px] dark:text-white">04/</p>
+                                    <h2 class="text-32  text-dark font-bold upper-description  w-[300px] dark:text-white">Real estate</h2>
+                                </div>
+                                <div class="description flex items-center   max-w-[670px] text-32 xl:pl-[0px] dark:text-white">
+                                    <h5 class="md:w-auto">We will conduct an effective promotion of a real estate website to attract customers from the search and convince them to call or leave a request.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="stages-of-work max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="usingtools font-bold text-h2 uppercase text-start md:text-h6 dark:text-white">Stages of work</div>
+                    <div class="stagesinfo__row border-t">
+                        <div class="stage__item flex justify-between pt-50 border-b flex-wrap md:flex-col md:justify-center">
+                            <div class="left__number text-middle-grey text-h6">0/1</div>
+                            <div class="stage__name uppercase text-center font-bold text-h4 basis-1/3 md:text-h5 dark:text-white">analysis</div>
+                            <div class="stageDiscription w-[340px] text-h6 md:text-h5 md:w-auto dark:text-white">We analyze the market, competitors, target audience, and previous advertising campaigns. We compose the semantic core and select the most relevant key queries. We develop the concept, and advertising offers and combine it into a comprehensive PPC strategy.</div>
+                        </div>
+                        <div class="stage__item flex justify-between py-50 border-b flex-wrap md:flex-col md:justify-center">
+                            <div class="left__number text-middle-grey text-h6">0/2</div>
+                            <div class="stage__name uppercase text-center font-bold text-h4 basis-1/3 md:text-h5 dark:text-white">Launch of an advertising campaign</div>
+                            <div class="stageDiscription w-[340px] text-h6 md:text-h5 md:w-auto dark:text-white">We analyze the market, competitors, target audience, and previous advertising campaigns. We compose the semantic core and select the most relevant key queries. We develop the concept, and advertising offers and combine it into a comprehensive PPC strategy.</div>
+                        </div>
+                        <div class="stage__item flex justify-between py-50 border-b flex-wrap md:flex-col md:justify-center">
+                            <div class="left__number text-middle-grey text-h6">0/3</div>
+                            <div class="stage__name uppercase text-center font-bold text-h4 basis-1/3 md:text-h5 dark:text-white">Advertising campaign optimization</div>
+                            <div class="stageDiscription w-[340px] text-h6 md:text-h5 md:w-auto dark:text-white">We analyze the market, competitors, target audience, and previous advertising campaigns. We compose the semantic core and select the most relevant key queries. We develop the concept, and advertising offers and combine it into a comprehensive PPC strategy.</div>
+                        </div>
+                        <div class="stage__item flex justify-between py-50 border-b flex-wrap md:flex-col md:justify-center">
+                            <div class="left__number text-middle-grey text-h6">0/4</div>
+                            <div class="stage__name uppercase text-center font-bold text-h4 basis-1/3 md:text-h5 dark:text-white">Reporting and campaign management</div>
+                            <div class="stageDiscription w-[340px] text-h6 md:text-h5 md:w-auto dark:text-white">We analyze the market, competitors, target audience, and previous advertising campaigns. We compose the semantic core and select the most relevant key queries. We develop the concept, and advertising offers and combine it into a comprehensive PPC strategy.</div>
+                        </div>
+                    </div>
+            </section>
+            <section class="promotions max-w-screen-2xl mx-auto px-15 pt-182 ">
+                <div class="promotionInNumbers border-t flex  justify-between">
+                    <div class="body__left  border-r pt-50 h-auto lg:hidden">
+                        <h4 class="text-h4 w-[360px] font-bold uppercase lg:text-h6 dark:text-white">WEBSITE PROMOTION in the entire search space</h4>
+                    </div>
+                    <div class="right-description-promotion pl-[10%] pt-50 md:pl-[0]">
+                        <div class="upper-description text-32 md:text-h6 dark:text-white">
+                            A brand gives a product or service an exceptional value for which the customer is willing to pay more. In the world of watches, you choose Rolex or Philippe Patek. The functionality is the same - any of it shows the time. But you are buying value and exclusivity.
+                        </div>
+                        <div class="lower-description pt-50 md:text-h6">
+                            <div class="font-bold dark:text-white">UWP.Digital</div> <div class="regular text-32 md:text-h6 dark:text-white">helps build a powerful brand with a strong reputation. Branding services include brand book creation, graphic design logo, unique brand name creation, digital graphic design of social networks, web design, tone of voice development, company image, and communication strategy development. We work on projects as a graphic design consultant and full-fledged design agency.</div>
+                        </div>
+                        <div class="lower-description__numbers flex justify-between md:flex-col pt-50">
+                            <div class="numItem flex flex-col basis-1/3 md:border-b">
+                                <div class="text-h3 font-bold text-light-red">4+</div>
+                                <div class="text-[18px] dark:text-white">years of work in the field of SEO promotion</div>
+                            </div>
+                            <div class="numItem flex flex-col border-x-[1px] px-[70px] basis-1/3 xl:p-[0] md:border-b md:border-x-[0px]">
+                                <div class="text-h3 font-bold text-light-red ">300+</div>
+                                <div class="dark:text-white">search engine-optimized sites</div>
+                            </div>
+                            <div class="numItem flex flex-col pl-[60px] basis-1/3 xl:p-[0] md:border-b">
+                                <div class="text-h3 font-bold text-light-red">10</div>
+                                <div class="dark:text-white">employees who are involved in each project group</div>
+                            </div>
+                        </div>
+                        <div class="promotion__summary text-dark text-32 pt-50 dark:text-white">As a result, you get high positions in Google and increase the traffic on your website. UWP.Digital can cooperate with you as a personal search engine optimization consultant or a search engine optimization agency.</div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="marketing max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="marketing__title font-bold text-h2 text-start border-b pb-50 md:text-h6 dark:text-white">PPC marketing services from UWP.Digital:</div>
+                <div class="marketing__body flex flex-col pl-[35%] flex-wrap md:p-[0px]">
+                    <div class="body__item items-center flex border-b py-10">
+                        <div class="number font-bold text-32 text-dark mr-[5%] md:text-h5 dark:text-white">1.</div>
+                        <div class="text font-bold text-32 text-dark md:text-[20px] dark:text-white">Individual PPC strategy development</div>
+                    </div>
+                    <div class="body__item items-center flex border-b py-10">
+                        <div class="number font-bold text-32 text-dark mr-[5%] md:text-h5 dark:text-white">2.</div>
+                        <div class="text font-bold text-32 text-dark md:text-[20px] dark:text-white">Selection of keywords</div>
+                    </div>
+                    <div class="body__item items-center flex border-b py-10">
+                        <div class="number font-bold text-32 text-dark mr-[5%] md:text-h5 dark:text-white">3.</div>
+                        <div class="text font-bold text-32 text-dark md:text-[20px] dark:text-white">Developing advertising with Google Ads</div>
+                    </div>
+                    <div class="body__item items-center flex border-b py-10">
+                        <div class="number font-bold text-32 text-dark mr-[5%] md:text-h5 dark:text-white">4.</div>
+                        <div class="text font-bold text-32 text-dark md:text-[20px] dark:text-white">Advanced Google Ads Analytics</div>
+                    </div>
+                    <div class="body__item items-center flex border-b py-10">
+                        <div class="number font-bold text-32 text-dark mr-[5%] md:text-h5 dark:text-white">5.</div>
+                        <div class="text font-bold text-32 text-dark md:text-[20px] dark:text-white">Optimizing Google advertising campaigns and increasing conversions</div>
+                    </div>
+                    <div class="body__item items-center flex border-b py-10">
+                        <div class="number font-bold text-32 text-dark mr-[5%] md:text-h5 dark:text-white">6.</div>
+                        <div class="text font-bold text-32 text-dark md:text-[20px] dark:text-white">Setting up remarketing google ads</div>
+                    </div>
+                </div>
+            </section>
+            <section class="digital max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="digital font-bold text-h2 text-start border-b pb-50 md:text-h6 dark:text-white">Web development from UWP.Digital</div>
+                <div class="upper-content__body pt-50 flex  justify-between w-auto md:flex-col">
+                    <div class="marketing-body__left  border-r pt-50 h-auto order-1 md:order-2 md:flex md:justify-center">
+                        <button class="text-h5 w-[320px] justify-center flex"><h2 class="px-22.5 flex py-10 text-white bg-main rounded-[60px] dark:text-white">Discuss the project <img  class="ml-10"src="img/arrow45.svg" alt=""></h2></button>
+                    </div>
+                    <div class="body-right pl-[15%] pt-50 md:pl-[0] order-2 md:order-1 dark:text-white">
+                        <div class="right-text text-32 ">There is no second chance to make a good impression on the user in the digital world. Therefore, the quality of the site directly affects sales. We will develop an attractive design, write a selling text and think over the structure so you will be remembered.
+
+                            You will receive a working tool that can attract and increase the flow of customers.</div>
+                    </div>
+                </div>
+                <div class="lower-content__body flex justify-between pt-50 md:flex-col">
+                    <div class="lower-left flex justify-center min-w-[320px] text-32 font-bold dark:text-white">UWP.Digital</div>
+                    <div class="lower-right text-32 ml-[15%]  max-w-[960px] md:ml-[0px]"><div class="font-bold dark:text-white">UWP.Digital</div><div class="sub-title dark:text-white">
+                        is a digital marketing agency that helps accelerate the achievement of your goals through detailed analysis and effective marketing tools.
+                            Our company is taking small business marketing to the next level, doing internal and external marketing for medium and large businesses, discovering new brands, and packaging startups. Our experience shows that a company with good digital marketing increases its revenue by several times.
+                    </div></div>
+                </div>
+            </section>
+            <section class="slider-footer bg-dark">
+                <div class="discuss max-w-screen-2xl mx-auto px-15 pt-182 ">
+                    <div class="discuss__title font-bold text-white text-h2 text-start border-b pb-50 md:text-h6">Let's discuss the project</div>
+                    <div class="upper-content__body pt-50 flex  justify-between w-auto md:flex-col">
+                        <div class="discuss-body__left  border-r pt-50 h-auto md: xl:hidden">
+                            <div class="text-white font-bold w-[320px]">Mellan 3 och 5 specialister arbetar med projektet.
+                                Erfarenheten hos de anställda på annonsavdelningen i sociala medier är 4 år.</div>
+                            <button class="text-h5 pt-10 f w-[320px] justify-center flex"><h2 class="px-22.5 flex py-10 text-white bg-main rounded-[60px]">Discuss the project <img  class="ml-10"src="img/arrow45.svg" alt=""></h2></button>
+                        </div>
+                        <div class="body-right pl-[15%] pt-50 md:pl-[0] order-2 md:order-1 relative xl:pl-[0px]">
+                            <div class="slider__body flex-col flex">
+                                <div class="slider__item relative flex justify-between pb-[80px] lg:flex-nowrap md:flex-col md:items-center">
+                                    <div class="slider__photo h-fit sm:flex-col md:flex relative">
+                                        <img class="w-[390px]  sm:order-2 flex md:w-auto md:w-full md:max-w-[260px]" src="img/daniella.svg" alt="">
+                                        <div class="profile__infoBtn justify-center items-center flex bg-white rounded-[50%] w-[72px] h-[72px] absolute left-[-25px] bottom-[-25px]">
+                                            <a href="#"><img class="w-[20px] h-[20px]" src="img/slider-arrow.svg" alt=""></a>
+                                        </div>
+                                        <div class="profile flex ">
+                                        <div class="name__icon minmd:hidden w-[64px] h-[64px] bg-light rounded-[50%] justify-center flex"><img class="w-[22px]" src="img/lapki.svg" alt=""></div>
+                                        <div class="profile__name sm:pb-[15px] sm:order-1 minmd:hidden pl-30 flex-col">
+                                            <div class="name text-white text-32">Daniella</div>
+                                            <div class="position text-middle-grey">Copywriter</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="slider__description pl-50 flex-col w-[600px] md:pl-[0px] md:w-[460px] md:w-full">
+                                        <div class="profile flex md:hidden ">
+                                            <div class="name__icon w-[64px] h-[64px] bg-light rounded-[50%] justify-center flex"><img class="w-[22px]" src="img/lapki.svg" alt=""></div>
+                                            <div class="profile__name pl-30 flex-col">
+                                                <div class="name text-white text-32">Daniella</div>
+                                                <div class="position text-middle-grey">Copywriter</div>
+                                            </div>
+                                        </div>
+                                        <div class="main__description text-white text-h5 pt-50">The digital world offers limitless possibilities for transforming an idea into a successful business.
+                                        We are a digital marketing agency that opens these opportunities to you. With the help of marketing tools and smart technologies, UWP connects customers with their favorite brands.</div>
+                                        <div class="profile__summary flex-col pt-[90px] md:pt-[5%] lg:pt-[20px]">
+                                            <div class="summary__jobs text-white">Працює з John Deere, STVOL, Anabel Arto, Є-Гроші, Kimito</div>
+                                            <div class="summary__numbers flex justify-start">
+                                                <div class="numbersofyears flex items-center">
+                                                    <div class="number  text-main text-h3 font-bold basis-1/3 md:text-32">6+</div>
+                                                    <div class="howmany text-white pl-15 sm:text-[10px]">років у компанії</div>
+                                                </div>
+                                                <div class="numbersofyears flex items-center pl-30">
+                                                    <div class="number  text-main text-h3 font-bold basis-1/3 md:text-32">150+</div>
+                                                    <div class="howmany text-white pl-15 sm:text-[10px]">успішних проектів </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__item relative flex justify-between pb-[80px] lg:flex-nowrap md:flex-col md:items-center">
+                                    <div class="slider__photo h-fit sm:flex-col md:flex relative"><img class="w-[390px] sm:order-2 flex md:w-auto md:w-full md:max-w-[260px]" src="img/serhii.webp" alt=""><div class="profile__infoBtn justify-center items-center flex bg-white rounded-[50%] w-[72px] h-[72px] absolute left-[-25px] bottom-[-25px]"><img class="w-[20px] h-[20px]" src="img/slider-arrow.svg" alt=""></div><div class="profile flex ">
+                                        <div class="name__icon minmd:hidden w-[64px] h-[64px] bg-light rounded-[50%] justify-center flex"><img class="w-[22px]" src="img/lapki.svg" alt=""></div>
+                                        <div class="profile__name sm:pb-[15px] sm:order-1 minmd:hidden pl-30 flex-col">
+                                            <div class="name text-white text-32">Serhii</div>
+                                            <div class="position text-middle-grey">CEO & Founder</div>
+                                        </div>
+                                    </div></div>
+                                    <div class="slider__description pl-50 flex-col w-[600px] md:pl-[0px] md:w-[460px] md:w-full">
+                                        <div class="profile flex md:hidden ">
+                                            <div class="name__icon w-[64px] h-[64px] bg-light rounded-[50%] justify-center flex"><img class="w-[22px]" src="img/lapki.svg" alt=""></div>
+                                            <div class="profile__name pl-30 flex-col">
+                                                <div class="name text-white text-32">Serhii</div>
+                                                <div class="position text-middle-grey">CEO & Founder</div>
+                                            </div>
+                                        </div>
+                                        <div class="main__description text-white text-h5 pt-50">I am a Ukrainian entrepreneur and founder of financial and marketing companies.
+                                            My professional path is mostly connected with the financial sector. I worked as a financial and cryptocurrency operations consultant for most of the top companies in Ukraine.
+                                            The year 2022 brought changes to the regular life and career opportunities of Ukrainians. However, business is about creating new opportunities as well. Therefore, in 2022, I founded a digital marketing agency in Sweden.</div>
+                                        <div class="profile__summary flex-col pt-[90px] md:pt-[5%] lg:pt-[20px]">
+                                            <div class="summary__jobs text-white">Працює з John Deere, STVOL, Anabel Arto, Є-Гроші, Kimito</div>
+                                            <div class="summary__numbers flex justify-start">
+                                                <div class="numbersofyears flex items-center">
+                                                    <div class="number  text-main text-h3 font-bold basis-1/3 md:text-32">8+</div>
+                                                    <div class="howmany text-white pl-15 sm:text-[10px]">років у компанії</div>
+                                                </div>
+                                                <div class="numbersofyears flex items-center pl-30">
+                                                    <div class="number  text-main text-h3 font-bold basis-1/3 md:text-32">250+</div>
+                                                    <div class="howmany text-white pl-15 sm:text-[10px]">успішних проектів </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__item relative flex justify-between pb-[80px] lg:flex-nowrap md:flex-col md:items-center">
+                                    <div class="slider__photo h-fit sm:flex-col md:flex relative"><img class="w-[390px] sm:order-2 flex md:w-auto md:w-full md:max-w-[260px]" src="img/anton.webp" alt=""><div class="profile__infoBtn justify-center items-center flex bg-white rounded-[50%] w-[72px] h-[72px] absolute left-[-25px] bottom-[-25px]"><img class="w-[20px] h-[20px]" src="img/slider-arrow.svg" alt=""></div><div class="profile flex ">
+                                        <div class="name__icon minmd:hidden w-[64px] h-[64px] bg-light rounded-[50%] justify-center flex"><img class="w-[22px]" src="img/lapki.svg" alt=""></div>
+                                        <div class="profile__name sm:pb-[15px] sm:order-1 minmd:hidden pl-30 flex-col">
+                                            <div class="name text-white text-32">Anton</div>
+                                            <div class="position text-middle-grey">Marketing Manager</div>
+                                        </div>
+                                    </div></div>
+                                    <div class="slider__description pl-50 flex-col w-[600px] md:pl-[0px] md:w-[460px] md:w-full">
+                                        <div class="profile flex md:hidden ">
+                                            <div class="name__icon w-[64px] h-[64px] bg-light rounded-[50%] justify-center flex"><img class="w-[22px]" src="img/lapki.svg" alt=""></div>
+                                            <div class="profile__name pl-30 flex-col">
+                                                <div class="name text-white text-32">Anton</div>
+                                                <div class="position text-middle-grey">Marketing Manager</div>
+                                            </div>
+                                        </div>
+                                        <div class="main__description text-white text-h5 pt-50">A Marketing Manager, or Marketing Department Manager, is responsible for overseeing
+                                             a team of marketing professionals within the marketing department. Their duties include relaying information between upper management and department employees regarding budgets and daily procedures,
+                                             overseeing the implementation of marketing campaigns to promote business products and services and hiring and training department, employees.</div>
+                                        <div class="profile__summary flex-col pt-[90px] md:pt-[5%] lg:pt-[20px]">
+                                            <div class="summary__jobs text-white">Працює з John Deere, STVOL, Anabel Arto, Є-Гроші, Kimito</div>
+                                            <div class="summary__numbers flex justify-start">
+                                                <div class="numbersofyears flex items-center">
+                                                    <div class="number  text-main text-h3 font-bold basis-1/3 md:text-32">3+</div>
+                                                    <div class="howmany text-white pl-15 sm:text-[10px]">років у компанії</div>
+                                                </div>
+                                                <div class="numbersofyears flex items-center pl-30">
+                                                    <div class="number  text-main text-h3 font-bold basis-1/3 md:text-32">80+</div>
+                                                    <div class="howmany text-white pl-15 sm:text-[10px]">успішних проектів </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ol class="slider__bullets flex justify-center pb-30 border-b mt-[20px]">
+                                    <li class="slider__bullet w-[15px] h-[15px] rounded-[50%] bg-middle-grey cursor-pointer mr-[20px] "></li>
+                                    <li class="slider__bullet w-[15px] h-[15px] rounded-[50%] bg-middle-grey cursor-pointer mr-[20px] "></li>
+                                    <li class="slider__bullet w-[15px] h-[15px] rounded-[50%] bg-middle-grey cursor-pointer mr-[20px] "></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discuss__lower info flex justify-between items-center">
+                        <div class="discuss__title font-bold flex text-white text-h2 text-center pb-50 md:text-h6">OUR cases</div>
+                        <a href="">
+                            <div class="discuss__extencion flex text-white text-h6 font-bold">look all <div class="discuss__circle ml-10 h-[35px] w-auto border rounded-[50%] flex justify-center"> <img src="img/arrow45.svg" class="w-[50%]" alt=""></div></div>
+                        </a>
+                    </div>
+                    <div class="news-section ">
+                        <div class="section-row  flex justify-between flex-wrap md:justify-center lg:justify-center pb-50">
+                            <div class="row-item flex flex-col w-[450px] pb-30">
+                                <div class="item-picture relative">
+                                    <div class="item-text absolute flex flex-col pl-15 w-1/2">
+                                        <div class="text-upper flex text-start items-center w-[240px]">
+                                            <div class="font-bold text-white text-h4">7+</div>
+                                            <div class="text-white ml-10">cost of attractinga customer</div>
+                                        </div>
+                                        <div class="text-lower">
+                                            <div class="promotion font-bold text-white text-h4">CR 30%</div>
+                                            <div class="text-description text-white">audience</div>
+                                        </div>
+                                    </div>
+                                <img class="lazy" src="img/girls.png" alt="">
+                                </div>
+                                <div class="card-footer flex justify-between pt-50">
+                                    <div class="card-footer__text text-32 text-white w-2/3">
+                                        INGRAD: Advertising campaign for mobile games
+                                    </div>
+                                    <div class="card-footer__icon">
+                                        <img src="img/arrow45.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-item flex flex-col w-[450px] xl:hidden">
+                                <div class="item-picture relative">
+                                    <div class="item-text absolute flex flex-col pl-15 w-1/2">
+                                        <div class="text-upper flex text-start items-center w-[240px]">
+                                            <div class="font-bold text-white text-h4">7+</div>
+                                            <div class="text-white ml-10">cost of attractinga customer</div>
+                                        </div>
+                                        <div class="text-lower">
+                                            <div class="promotion font-bold text-white text-h4">CR 30%</div>
+                                            <div class="text-description text-white">audience</div>
+                                        </div>
+                                    </div>
+                                <img class="lazy" src="img/tablet.png" alt="">
+                                </div>
+                                <div class="card-footer flex justify-between pt-50">
+                                    <div class="card-footer__text text-32 text-white w-2/3">
+                                        INGRAD: Advertising campaign for mobile games
+                                    </div>
+                                    <div class="card-footer__icon">
+                                        <img src="img/arrow45.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-item flex flex-col w-[450px] md:hidden">
+                                <div class="item-picture relative">
+                                    <div class="item-text absolute flex flex-col pl-15 w-1/2">
+                                        <div class="text-upper flex text-start items-center w-[240px]">
+                                            <div class="font-bold text-white text-h4">7+</div>
+                                            <div class="text-white ml-10">cost of attractinga customer</div>
+                                        </div>
+                                        <div class="text-lower">
+                                            <div class="promotion font-bold text-white text-h4">CR 30%</div>
+                                            <div class="text-description text-white">audience</div>
+                                        </div>
+                                    </div>
+                                <img class="lazy" src="img/bar.png">
+                                </div>
+                                <div class="card-footer flex justify-between pt-50">
+                                    <div class="card-footer__text text-32 text-white w-2/3">
+                                        INGRAD: Advertising campaign for mobile games
+                                    </div>
+                                    <div class="card-footer__icon">
+                                        <img src="img/arrow45.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .slider__bullet.active {
+                    background-color: #FF304D; 
+                    }
+                </style>
+                <script>
+                    let sliderIndex = 0;
+                    const sliderItems = document.querySelectorAll('.slider__item');
+                    const sliderBullets = document.querySelectorAll('.slider__bullet');
+
+                    function showSliderItem(n) {
+                    sliderItems.forEach(item => item.style.display = 'none');
+                    sliderBullets.forEach(bullet => bullet.classList.remove('active'));
+                    sliderItems[n].style.display = 'flex';
+                    sliderBullets[n].classList.add('active');
+                    }
+
+                    function nextSliderItem() {
+                    sliderIndex++;
+                    if (sliderIndex >= sliderItems.length) {
+                        sliderIndex = 0;
+                    }
+                    showSliderItem(sliderIndex);
+                    }
+
+                    function prevSliderItem() {
+                    sliderIndex--;
+                    if (sliderIndex < 0) {
+                        sliderIndex = sliderItems.length - 1;
+                    }
+                    showSliderItem(sliderIndex);
+                    }
+
+                    sliderBullets.forEach((bullet, index) => {
+                    bullet.addEventListener('click', () => {
+                        sliderIndex = index;
+                        showSliderItem(sliderIndex);
+                        sliderBullets.forEach(bullet => bullet.classList.remove('active'));
+                        bullet.classList.add('active');
+                    });
+                    });
+
+                    showSliderItem(sliderIndex);
+                  </script>
+            </section>
+            <section class="faq max-w-screen-2xl mx-auto px-15 pt-182">
+                <div class="faq font-bold text-h2 text-start border-b pb-50 md:text-h6 dark:text-white">FAQ</div>
+                <div class="faq border-t flex  pb-30">
+                    <div class="faq__body__left  border-r pt-50 h-auto lg:hidden w-1/3">
+                        <h4 class="text-middle-grey  font-bold uppercase lg:text-h6 dark:text-white">WE ANSWER THE MOST COMMON QUESTIONS</h4>
+                    </div>
+                    <div class="faq__body__right pl-[160px] w-full flex-col flex justify-between lg:pl-[0px]">
+                        <div class="faq_body__item flex-col  items-center flex border-b py-10 ">
+                            <div class="faq_text font-bold flex text-32 justify-between w-full text-dark md:text-[20px] faq-header cursor-pointer dark:text-white">
+                                What is UX Design?<div class="faq-dropdown cursor-pointer dark:text-white">+</div>
+                            </div>
+                            <div class="faq-description flex flex-col hidden dark:text-white">
+                              UX Design (User Experience Design) is the process that studies and defines what kind of experience a user will have when using your product.
+                              It is best to demonstrate on the website. These are functionality, convenience, ease of use, an intuitive understanding of website services, and user interaction with your site.
+                            </div>
+                        </div>
+                        <div class="faq_body__item flex-col  items-center flex  border-b py-10 ">
+                            <div class="faq_text font-bold flex text-32 justify-between w-full text-dark md:text-[20px] faq-header cursor-pointer dark:text-white">What is graphic design?<div class="faq-dropdown cursor-pointer">+</div></div>
+                            <div class="faq-description flex flex-col hidden dark:text-white">
+                              UX Design (User Experience Design) is the process that studies and defines what kind of experience a user will have when using your product.
+                              It is best to demonstrate on the website. These are functionality, convenience, ease of use, an intuitive understanding of website services, and user interaction with your site.
+                            </div>
+                        </div>
+                        <div class="faq_body__item flex-col  items-center flex  border-b py-10 ">
+                            <div class="faq_text font-bold flex text-32 justify-between w-full text-dark md:text-[20px] faq-header cursor-pointer dark:text-white">What does a graphic designer do?<div class="faq-dropdown cursor-pointer">+</div></div>
+                            <div class="faq-description flex flex-col hidden dark:text-white">
+                              UX Design (User Experience Design) is the process that studies and defines what kind of experience a user will have when using your product.
+                              It is best to demonstrate on the website. These are functionality, convenience, ease of use, an intuitive understanding of website services, and user interaction with your site.
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        
+                    </style>
+
+                </div>
+            </section>
+            <section class="pre-footer bg-dark relative">
+                <div class="promote max-w-screen-2xl mx-auto px-15  ">
+                    <div class="discuss__title font-bold text-white text-h2 text-center border-b py-50 md:text-h6">Let's promote your business</div>
+                    <div class="promote-body lg:justify-start mx-auto flex flex-wrap justify-between py-50">
+                        <div class="left-column  text-middle-grey w-[300px] lg:hidden">GET A DETAILED AND COMPREHENSIVE COMMERCIAL PROPOSAL</div>
+                        <div class="reply-form-column px-15 flex flex-col">
+                            <form class="sm:flex sm:flex-col sm:items-start" action="send.php" method="post" class="contact-form  max-w-full" enctype="multipart/form-data">
+                                <div class="person-input md:flex-col md:items-end  i-c-2 flex justify-between">
+                                  <div class="yourname mb-10 w-full">
+                                    <input class="bg-transparent py-10 px-22.5 border rounded-[50px] text-white w-full" type="text" name="name" required placeholder="Your name?*">
+                                  </div>
+                                  <div class="email ml-10 mt w-full">
+                                    <input class="bg-transparent py-10 px-22.5 border rounded-[50px] text-white w-full" type="email" name="email" required placeholder="Your e-mail?*">
+                                  </div>
+                                </div>
+                                <div class="info-input md:flex-col md:items-end  mt-10 flex justify-between">
+                                  <div class="phonenumber mb-10 w-full">
+                                    <input class="bg-transparent py-10 px-22.5 border rounded-[50px] text-white w-full" type="text" required placeholder="Phone number*">
+                                  </div>
+                                  <div class="company ml-10 w-full">
+                                    <input class="bg-transparent py-10 px-22.5 border rounded-[50px] text-white w-full" type="text" required placeholder="Company">
+                                  </div>
+                                </div>
+                                <div class="text-control mt-10 w-full">
+                                  <textarea class="w-full bg-transparent py-10 px-22.5 border rounded-[30px] text-white sm:w-[240px]" name="message" id="" cols="5" rows="1" placeholder="Tell us about your project..."></textarea>
+                                </div>
+                                <div class="atach-zone items-center flex pt-22.5">
+                                    <button type="button" id="attach-btn" class="text-middle-grey flex justify-center items-center ml-10">
+                                      <div class="atach-icon-bg flex justify-center items-center w-[38px] h-[38px] rounded-[50%] bg-middle-grey">
+                                        <img src="img/skrepka.svg" alt="">
+                                      </div>
+                                      <span id="file-label" class="ml-10">Attach a file</span>
+                                    </button>
+                                    <input type="file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx" id="file-input" class="hidden">
+                                  </div>
+                                  
+                                  <script>
+                                    const attachBtn = document.getElementById('attach-btn');
+                                    const fileInput = document.getElementById('file-input');
+                                    const fileLabel = document.getElementById('file-label');
+                                  
+                                    attachBtn.addEventListener('click', () => {
+                                      fileInput.click();
+                                    });
+                                  
+                                    fileInput.addEventListener('change', () => {
+                                      fileLabel.textContent = fileInput.files[0].name;
+                                    });
+                                  </script>
+                              </form>
+                            <div class="details sm:flex-col lg:pb-30 flex justify-between pt-50">
+                                <div class="detail__text text-middle-grey w-[350px] sm:pb-30 sm:text-[12px] sm:w-full">By clicking the "Send" button, you consent to the processing of personal data. <a class="ml-10 text-prototype" href="">More details</a></div>
+                                <button class="detail__btn flex items-center ml-50 sm:ml-[0px] text-center justify-center rounded-[60px] bg-main px-22.5 text-white">Discuss the project <img class="ml-10" src="img/arrow45.svg" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="semi-contacts z-10 sm:pl-15 lg:w-full lg:pt-50 lg:border-t lg:border-l-[0px] w-[300px] flex flex-col pl-50 border-l">
+                            <div class="contacts__title text-white">Onnekop Per Bings vag 13B, 242 98 Horby, Sweden</div>
+                            <div class="contact__mail text-white font-bold pt-[25px] text-32 lg:text-main">info@uwp.digital</div>
+                            <div class="contact__msg text-middle-grey">Shoot us a message</div>
+                        </div>
+                    </div>
+                    <img class="absolute right-[0px] top-[0px]" src="img/blur.svg" alt="">
+                </div>
+            </section>
+         </main>
+         <footer class="footer">
+                <div class="upper-footer max-w-screen-2xl flex flex-wrap justify-between mx-auto py-[40px] px-15 border-b">
+                    <nav class="footer__navigation flex">
+                        <ul class="flex flex-wrap gap-[25px] ">
+                            <li><a class="text-dark text-h6 mr-[65px] md:mr-50 dark:text-white" href="">About us</a></li>
+                            <li><a class="text-dark text-h6 mr-[65px] md:mr-50 dark:text-white" href="">Case Studies</a></li>
+                            <li><a class="text-dark text-h6 mr-[65px] md:mr-50 dark:text-white" href="">Services</a></li>
+                            <li><a class="text-dark text-h6 mr-[65px] md:mr-50 dark:text-white" href="">Blog</a></li>
+                            <li><a class="text-dark text-h6 dark:text-white" href="">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="fotter__icons z-10 flex justify-between items-center justify-center md:hidden">
+                        <a href="#"><img class="" src="img/instagram.svg" alt=""></a>
+                        <a href="#"><img class="ml-[70px]" src="img/facebook.svg" alt=""></a>
+                        <a href="#"><img class="ml-[70px]" src="img/linkedin.svg" alt=""></a>
+                        <a href="#"><img class="ml-[70px]" src="img/social.svg" alt=""></a>
+                    </div>
+                </div>
+                    <ul class="lower-footer md:gap-[20px] max-w-screen-2xl flex flex-wrap py-22.5 mx-auto px-15 flex justify-between border-b">
+                        <li class="text-dark dark:text-white">BRANDING</li>
+                        <li class="text-dark dark:text-white">DIGITAL MARKETING</li>
+                        <li class="text-dark dark:text-white">WEB design</li>
+                        <li class="text-dark dark:text-white">SMM</li>
+                        <li class="text-dark dark:text-white">PPC</li>
+                        <li class="text-dark dark:text-white">TikTok</li>
+                        <li class="text-dark dark:text-white">VIDEO MOTION</li>
+                        <li class="text-dark dark:text-white">SEO</li>
+                        <li class="text-dark dark:text-white">MOBILE PROMOTION</li>
+                    </ul>
+                    <div class="fotter__icons z-10 flex justify-between items-center justify-center minmd:hidden">
+                        <a href="#"><img class="" src="img/instagram.svg" alt=""></a>
+                        <a href="#"><img class="ml-[70px]" src="img/facebook.svg" alt=""></a>
+                        <a href="#"><img class="ml-[70px]" src="img/linkedin.svg" alt=""></a>
+                        <a href="#"><img class="ml-[70px]" src="img/social.svg" alt=""></a>
+                    </div>
+                    <div class="privacy flex justify-center py-22.5 text-middle-grey flex-wrap gap-[20px]">
+                        <div class="date dark:text-white">© 2022 Unity World Platform. All rights reserved.</div>
+                        <div class="terms dark:text-white">Terms & Conditions</div>
+                        <div class="private dark:text-white">Privacy Policy</div>
+                    </div>
+         </footer>
+         <script>
+            const faqHeaders = document.querySelectorAll('.faq-header');
+
+            faqHeaders.forEach((header) => {
+            header.addEventListener('click', () => {
+                const dropdown = header.querySelector('.faq-dropdown');
+                const description = header.nextElementSibling;
+                header.classList.toggle('text-main');
+                dropdown.textContent = header.classList.contains('text-main') ? '-' : '+';
+                description.classList.toggle('hidden');
+            });
+            });
+          </script>
+          <script>
+            const toggleTheme = () => {
+            const html = document.querySelector('html');
+            html.classList.toggle('dark');
+            const toggleDark = document.querySelector('.toggle-theme[src="img/toggle-dark.svg"]');
+            const toggleLight = document.querySelector('.toggle-theme[src="img/toggle-light.svg"]');
+            toggleDark.classList.toggle('hidden');
+            toggleLight.classList.toggle('hidden');
+            };
+
+            const themeSwitcher = document.querySelectorAll('.toggle-theme');
+            themeSwitcher.forEach((el) => {
+            el.addEventListener('click', toggleTheme);
+            });
+          </script>
+          <!-- toogle-theme -->
+          <script>
+            const burgerIcon = document.querySelector('.burger-icon');
+            const navigation = document.querySelector('#navigation');
+
+            burgerIcon.addEventListener('click', function() {
+            navigation.classList.toggle('show');
+            });
+          </script>
+                                  <script>
+                                        // Get all the buttons
+                                        const buttons = document.querySelectorAll('.btn');
+                                    
+                                        // Add a click event listener to each button
+                                        buttons.forEach(button => {
+                                            button.addEventListener('click', () => {
+                                                // Remove the "active" class from all buttons
+                                                buttons.forEach(b => {
+                                                    b.classList.remove('active');
+                                                    b.querySelector('.icon-box').classList.remove('bg-main');
+                                                });
+                                                // Add the "active" class to the clicked button
+                                                button.classList.add('active');
+                                                button.querySelector('.icon-box').classList.add('bg-main');
+                                            });
+                                        });
+                                    </script>
+            <script>
+                // Initialize the IntersectionObserver with a threshold of 0.1
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      // Initialize lozad for each img tag within the view port
+                      const lazyImage = entry.target;
+                      const lozadInstance = lozad(lazyImage);
+                      lozadInstance.observe();
+                    }
+                  });
+                }, {
+                  threshold: 0.1
+                });
+                
+                // Observe all img tags with class 'lozad'
+                const lazyImages = document.querySelectorAll('.lozad');
+                lazyImages.forEach(img => {
+                  observer.observe(img);
+                });
+                </script>
+     </div>
+</body>
+</html>
