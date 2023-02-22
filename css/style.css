@@ -525,6 +525,10 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .bottom-\[-25px\] {
   bottom: -25px;
 }
@@ -539,6 +543,10 @@ video {
 
 .top-\[0px\] {
   top: 0px;
+}
+
+.top-\[20px\] {
+  top: 20px;
 }
 
 .z-10 {
@@ -1405,6 +1413,10 @@ video {
 
   .md\:pt-\[5\%\] {
     padding-top: 5%;
+  }
+
+  .md\:pr-\[0px\] {
+    padding-right: 0px;
   }
 
   .md\:text-32 {
